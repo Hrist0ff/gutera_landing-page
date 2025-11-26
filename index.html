@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gutera - Гастро-интестинален баланс</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gutera: {
+                green: '#6a9a3b', // Matches the packaging green
+                gold: '#d89c36',  // Matches the packaging gold/mustard
+                blue: '#0f2648',  // Matches the logo text blue
+                light: '#f7f9f2', // Light background hint
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            animation: {
+              'drink': 'drink 4s ease-in-out infinite',
+              'fall': 'fall 0.4s linear infinite',
+            },
+            keyframes: {
+              drink: {
+                '0%, 100%': { transform: 'rotate(0deg) translateY(0)' },
+                '50%': { transform: 'rotate(-10deg) translateY(-5px) translateX(-2px)' },
+              },
+              fall: {
+                '0%': { transform: 'translateY(-20px)' },
+                '100%': { transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      /* Smooth scrolling */
+      html { scroll-behavior: smooth; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
