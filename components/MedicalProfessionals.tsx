@@ -20,9 +20,6 @@ const MedicalProfessionals: React.FC = () => {
                   Специализирана секция за лекари, фармацевти и диетолози. Научни данни за механизма на действие на Gutera.
                 </p>
              </div>
-             <button className="mt-4 md:mt-0 flex items-center text-gutera-blue font-bold hover:text-gutera-green transition-colors">
-                Вход за специалисти <ArrowRight size={18} className="ml-2" />
-             </button>
           </div>
         </RevealOnScroll>
 
@@ -85,7 +82,12 @@ const MedicalProfessionals: React.FC = () => {
                     <p className="text-blue-200 text-sm mb-6">
                         Медицински представители могат да заявят професионален стартов пакет за своята практика.
                     </p>
-                    <button className="w-full py-3 bg-white text-gutera-blue font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-lg">
+                    <button 
+                        className="w-full py-3 bg-white text-gutera-blue font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-lg"
+                        // mailto office@healthhub.com with subject "Заявка за мостра Gutera"
+                        onClick={() => window.location.href = 'mailto:office@healthhub.com?subject=Заявка%20за%20мостра%20Gutera'}
+                    >
+                        
                         Свържете се с нас
                     </button>
                     <p className="text-xs text-blue-300/60 mt-4 text-center">

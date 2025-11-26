@@ -10,7 +10,7 @@ const Logo: React.FC<{ className?: string }> = ({ className = "h-10" }) => {
           className="h-10 w-auto"
           >
         </img>
-      <span className="font-bold text-3xl tracking-tight text-gutera-blue">
+      <span className="font-bold text-2xl tracking-tight text-gutera-blue">
         Gutera
       </span>
     </div>
