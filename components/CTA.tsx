@@ -23,7 +23,9 @@ const CTA: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="group bg-gutera-green text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-[#5a8533] transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-gutera-green/20 transform hover:-translate-y-1 flex items-center">
+              <button 
+                              onClick={() => window.open('https://colfoo.com/', '_blank')}
+              className="group bg-gutera-green text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-[#5a8533] transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-gutera-green/20 transform hover:-translate-y-1 flex items-center">
                 Поръчай сега
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </button>

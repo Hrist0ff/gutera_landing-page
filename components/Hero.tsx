@@ -30,7 +30,10 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pointer-events-auto">
-              <button className="group flex items-center justify-center space-x-2 bg-gutera-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#5a8533] transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-gutera-green/40 transform hover:scale-105 active:scale-95">
+              <button 
+                className="group flex items-center justify-center space-x-2 bg-gutera-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#5a8533] transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-gutera-green/40 transform hover:scale-105 active:scale-95"
+                onClick={() => window.open('https://colfoo.com/', '_blank')}
+              >
                 <span>Поръчай Gutera</span>
                 <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
               </button>
