@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
-import { Calendar as CalendarIcon, Download, ArrowRight, CheckCircle, CalendarDays } from 'lucide-react';
+import { Calendar as CalendarIcon, Download, ArrowRight, CheckCircle } from 'lucide-react';
 import RevealOnScroll from './RevealOnScroll';
 
 // Helper to add months safely
 const addMonths = (date: Date, months: number) => {
   const d = new Date(date);
   d.setMonth(d.getMonth() + months);
+  return d;
+};
+
+// Helper to add days
+const addDays = (date: Date, days: number) => {
+  const d = new Date(date);
+  d.setDate(d.getDate() + days);
   return d;
 };
 
@@ -119,7 +126,6 @@ END:VEVENT
                                     onChange={(e) => setStartDate(e.target.value)}
                                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-gutera-gold focus:border-transparent transition-all [color-scheme:dark]"
                                 />
-                                <CalendarDays className="absolute right-3 top-3 text-gutera-gold pointer-events-none" size={20} />
                             </div>
                         </div>
 
@@ -158,33 +164,65 @@ END:VEVENT
                                     </div>
 
                                     {/* Card Content */}
-                                    <div className="flex-1 w-full bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-md transition-shadow duration-300">
-                                        <div className="flex flex-wrap justify-between items-center mb-4">
+                                    <div className="flex-1 w-full bg-gradient-to-r from-gutera-light/80 via-white to-gutera-light/60 rounded-xl p-5 border border-gray-100 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                                        <div className="absolute -right-10 -top-10 w-32 h-32 bg-gutera-green/5 rounded-full pointer-events-none"></div>
+                                        <div className="absolute -left-6 bottom-2 w-16 h-16 bg-gutera-gold/10 rounded-full pointer-events-none"></div>
+
+                                        <div className="flex flex-wrap justify-between items-center mb-4 relative">
                                             <div className="flex items-center space-x-2">
                                                 <span className="bg-gutera-green/10 text-gutera-green px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
                                                     Месец {cycle.month}
                                                 </span>
                                                 <h4 className="font-bold text-gray-800">10-дневен курс</h4>
                                             </div>
-                                            <span className="text-sm text-gray-500 font-medium bg-white px-3 py-1 rounded-md shadow-sm border border-gray-100 mt-2 sm:mt-0">
-                                                {formatDate(cycle.start)} - {formatDate(cycle.end)}
-                                            </span>
+                                            <div className="text-right">
+                                                <span className="block text-sm text-gray-700 font-semibold bg-white px-3 py-1 rounded-md shadow-sm border border-gray-100">
+                                                    {formatDate(cycle.start)} - {formatDate(cycle.end)}
+                                                </span>
+                                                <span className="text-[11px] text-gray-400 block mt-1">10 дни прием · 20 дни пауза</span>
+                                            </div>
                                         </div>
 
                                         {/* Visual progress bar days */}
-                                        <div className="flex items-center space-x-1">
-                                            {Array.from({ length: 10 }).map((_, i) => (
-                                                <div key={i} className="flex-1 h-2 bg-gutera-green rounded-full opacity-80" title={`Ден ${i + 1}`}></div>
-                                            ))}
-                                            <div className="flex-1 h-2 bg-gray-200 rounded-full" title="Почивка"></div>
-                                            <div className="flex-1 h-2 bg-gray-200 rounded-full" title="Почивка"></div>
-                                            <div className="flex-1 h-2 bg-gray-200 rounded-full" title="Почивка"></div>
-                                            <ArrowRight size={14} className="text-gray-400 ml-2" />
+                                        <div className="mb-4 space-y-3">
+                                            <div className="relative h-5 text-xs text-gray-500">
+                                                <span className="absolute left-0 top-0">{formatDate(cycle.start)}</span>
+                                                <span 
+                                                  className="absolute top-0 whitespace-nowrap"
+                                                  style={{ left: '33.333%', transform: 'translateX(-50%)' }}
+                                                >
+                                                  {formatDate(cycle.end)}
+                                                </span>
+                                                <span className="absolute right-0 top-0 text-right">{formatDate(addDays(cycle.start, 29))}</span>
+                                            </div>
+                                            <div className="relative h-3 w-full bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                                                <div 
+                                                  className="h-full bg-gradient-to-r from-gutera-green via-gutera-green to-gutera-green/80" 
+                                                  style={{ width: '33.333%' }} 
+                                                  title="10 дни прием"
+                                                />
+                                                <div className="absolute left-1/3 top-0 h-full w-px bg-gutera-gold/70" aria-hidden="true" />
+                                                <div className="absolute right-0 inset-y-0 flex items-center pr-2">
+                                                    <span className="text-[11px] text-gray-400 font-semibold">Пауза</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="flex justify-between mt-2 text-xs text-gray-400">
-                                            <span>Старт</span>
-                                            <span>Край на прием</span>
-                                            <span>Пауза</span>
+
+                                        <div className="flex flex-wrap gap-3">
+                                            <div className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-white border border-gray-100 shadow-sm">
+                                                <div className="w-2.5 h-2.5 rounded-full bg-gutera-green"></div>
+                                                <div className="text-xs">
+                                                    <p className="text-gray-700 font-semibold">Активни дни</p>
+                                                    <p className="text-gray-400">10 приема в месеца</p>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-white border border-gray-100 shadow-sm">
+                                                <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                                                <div className="text-xs">
+                                                    <p className="text-gray-700 font-semibold">Пауза</p>
+                                                    <p className="text-gray-400">20 дни възстановяване</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(true);
 
   return (
     <div className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden">
@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
              <img 
                 src="./sachet.png" 
                 alt="Gutera Sachet" 
-                className={`absolute w-36 md:w-48 h-auto drop-shadow-xl transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] z-20 ${isHovered ? 'top-10 left-1/2 -translate-x-1/2 rotate-[135deg] translate-y-0 scale-75 shadow-2xl' : 'bottom-0 left-0 md:left-4 rotate-[-10deg] translate-y-0'}`}
+                className={`absolute w-36 md:w-36 h-auto drop-shadow-xl transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] z-20 ${isHovered ? 'top-10 left-1/2 -translate-x-1/2 rotate-[135deg] translate-y-0 scale-75' : 'bottom-0 left-0 md:left-4 rotate-[-10deg] translate-y-0'}`}
              />
 
              {/* Falling Powder Particles (Simulating Dissolving) */}

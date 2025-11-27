@@ -20,7 +20,7 @@ function App() {
         <Hero />
         <Mechanism />
         <Features />
-        <Ingredients />
+        {/* <Ingredients /> */}
         <UsageGuide />
         <SchedulePlanner />
         <MedicalProfessionals />

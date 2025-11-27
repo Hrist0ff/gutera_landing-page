@@ -190,9 +190,9 @@ const UsageGuide: React.FC = () => {
                       <circle cx="100" cy="70" r="32" fill="#f8fafc" stroke="#94a3b8" strokeWidth="2" />
                       
                       {/* Face Features (Profile Left) */}
-                      <path d="M80 70 Q70 70 72 80" fill="none" stroke="#64748b" strokeWidth="2" strokeLinecap="round" /> {/* Nose */}
-                      <circle cx="90" cy="65" r="2.5" fill="#475569" /> {/* Eye */}
-                      <path d="M85 85 Q90 90 100 88" fill="none" stroke="#475569" strokeWidth="1.5" strokeLinecap="round" /> {/* Smile */}
+                      <circle cx="92" cy="65" r="2.5" fill="#475569" /> {/* Left Eye */}
+                      <circle cx="108" cy="65" r="2.5" fill="#475569" /> {/* Right Eye */}
+                      <path d="M90 86 Q100 92 110 86" fill="none" stroke="#475569" strokeWidth="1.5" strokeLinecap="round" /> {/* Smile */}
                       
                       {/* Hair hint */}
                       <path d="M125 55 Q110 30 80 45" fill="none" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" />
