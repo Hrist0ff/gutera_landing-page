@@ -6,6 +6,29 @@ const Hero: React.FC = () => {
 
   return (
     <div className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden">
+      {/* Use-case collage background */}
+      <div className="absolute inset-0 pointer-events-none opacity-100 md:opacity-70">
+        <div className="grid grid-cols-2 grid-rows-2 h-full w-full">
+          {[
+            { src: '/usecases_gutera/gutera_in_travel_luggage.png', alt: 'Gutera в пътния багаж' },
+            { src: '/usecases_gutera/gutera_in_everyday_bag.png', alt: 'Gutera в ежедневната чанта' },
+            { src: '/usecases_gutera/gutera_in_car.png', alt: 'Gutera в автомобила' },
+            { src: '/usecases_gutera/gutera_in_hotel_nightstand.png', alt: 'Gutera на нощно шкафче в хотел' }
+          ].map((img, idx) => (
+            <div key={idx} className="relative">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/30 to-white/10"></div>
+            </div>
+          ))}
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-white/60"></div>
+      </div>
+
       {/* Background Graphic Elements */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-gutera-gold/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-gutera-green/10 rounded-full blur-3xl"></div>

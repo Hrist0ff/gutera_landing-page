@@ -20,6 +20,14 @@ const MedicalProfessionals: React.FC = () => {
                   Обобщение на ключови моменти за безопасност, съхранение и начин на действие на Gutera™.
                 </p>
              </div>
+             <div className="hidden md:block w-64 h-40 rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                <img 
+                  src="/gutera_boxes_on_shelf_in_pharmacy.png"
+                  alt="Gutera кутии на рафт в аптека"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+             </div>
           </div>
         </RevealOnScroll>
 

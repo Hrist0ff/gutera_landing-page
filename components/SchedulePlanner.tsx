@@ -129,7 +129,7 @@ END:VEVENT
                             </div>
                         </div>
 
-                        <div className="mt-auto">
+                        <div className="mt-0">
                             <h3 className="text-2xl font-bold mb-2 text-gutera-gold">Стъпка 2</h3>
                             <p className="text-blue-200 mb-6">Изтеглете графика и добавете напомняния в календара си.</p>
                             <button 

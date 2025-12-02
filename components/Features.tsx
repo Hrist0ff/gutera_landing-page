@@ -12,8 +12,29 @@ const Features: React.FC = () => {
         <div className="mb-20">
             <RevealOnScroll>
                 <h2 className="text-3xl md:text-4xl font-bold text-gutera-blue text-center mb-12">
-                Ползи, описани в листовката
+                Ползи от приема на Gutera™
                 </h2>
+            </RevealOnScroll>
+
+            <RevealOnScroll delay={80}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 bg-white rounded-3xl border border-gray-100 shadow-lg overflow-hidden">
+                    <div className="p-8 md:p-10">
+                        <p className="text-sm uppercase tracking-[0.18em] text-gutera-green font-semibold mb-3">Натурална грижа</p>
+                        <h3 className="text-2xl font-bold text-gutera-blue mb-4">Чиста формула без добавени щамове</h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            Gutera™ подпомага микробиома чрез качествен хранителен субстрат, без пробиотици и без газообразуване. Съвместима е с активен начин на живот, диети и пътувания.
+                        </p>
+                    </div>
+                    <div className="relative h-64 md:h-full">
+                        <img 
+                            src="/gutera_and_its_ingredients.png"
+                            alt="Gutera и основните натурални съставки"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-gutera-blue/10 via-transparent to-white/10"></div>
+                    </div>
+                </div>
             </RevealOnScroll>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

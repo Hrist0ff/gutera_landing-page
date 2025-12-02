@@ -65,7 +65,7 @@ const UsageGuide: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
+        <div className="relative flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 lg:pr-72">
           
           {/* Animation Stage */}
           <div className="relative w-72 h-72 md:w-96 md:h-96 bg-gutera-light/50 rounded-full flex items-center justify-center shadow-inner border border-gutera-green/10">
@@ -262,10 +262,15 @@ const UsageGuide: React.FC = () => {
                 </div>
               ))}
             </div>
-            
-            <div className="mt-8 bg-gutera-gold/10 p-4 rounded-lg border border-gutera-gold/20 text-sm text-gutera-blue flex items-start">
-               <div className="mr-2 mt-0.5 min-w-[16px]">💡</div>
-               <p><strong>Съвет:</strong> Ако сместа се сгъсти прекалено много, добавете още малко вода и разбъркайте отново. Не превишавайте препоръчителния дневен прием и не използвайте като заместител на разнообразното хранене.</p>
+
+            <div className="hidden lg:block absolute right-0 top-4 w-64 h-80 rounded-3xl overflow-hidden border border-gutera-green/10 shadow-2xl pointer-events-none">
+              <img 
+                src="/pouring_gutera_in_glass.png"
+                alt="Gutera, готова за прием"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-white/10 to-transparent"></div>
             </div>
           </div>
 
