@@ -4,8 +4,17 @@ import RevealOnScroll from './RevealOnScroll';
 
 const MedicalProfessionals: React.FC = () => {
   return (
-    <section id="professionals" className="py-20 bg-slate-50 border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="professionals" className="relative py-20 border-t border-slate-200 overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src="/gutera_boxes_on_shelf_in_pharmacy.png"
+          alt="Gutera кутии на рафт в аптека"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/85 via-white/80 to-white/60" />
+      </div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <RevealOnScroll>
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-slate-200 pb-6">
              <div className="max-w-2xl">
@@ -19,14 +28,6 @@ const MedicalProfessionals: React.FC = () => {
                 <p className="text-gray-600 mt-4">
                   Обобщение на ключови моменти за безопасност, съхранение и начин на действие на Gutera™.
                 </p>
-             </div>
-             <div className="hidden md:block w-64 h-40 rounded-2xl overflow-hidden shadow-md border border-slate-200">
-                <img 
-                  src="/gutera_boxes_on_shelf_in_pharmacy.png"
-                  alt="Gutera кутии на рафт в аптека"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
              </div>
           </div>
         </RevealOnScroll>
