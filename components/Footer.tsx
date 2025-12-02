@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
                  <Logo className="h-8 text-white" />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Gutera подкрепя естествения ритъм на тялото ви чрез силата на природата и науката.
+              Gutera подкрепя естествения ритъм на тялото ви чрез силата на природата и науката. За повече информация посетете: <a href="https://www.gutera.bg" className="underline hover:text-white">www.gutera.bg</a>.
             </p>
           </div>
 

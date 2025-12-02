@@ -12,7 +12,7 @@ const Features: React.FC = () => {
         <div className="mb-20">
             <RevealOnScroll>
                 <h2 className="text-3xl md:text-4xl font-bold text-gutera-blue text-center mb-12">
-                Ползи от приема на Gutera
+                Ползи, описани в листовката
                 </h2>
             </RevealOnScroll>
             
@@ -22,7 +22,7 @@ const Features: React.FC = () => {
                     <div className="bg-gutera-green/5 rounded-3xl p-8 border border-gutera-green/10 hover:shadow-lg transition-shadow duration-300 h-full">
                         <h3 className="text-2xl font-bold text-gutera-green mb-6 flex items-center">
                             <span className="w-2 h-8 bg-gutera-green mr-3 rounded-full"></span>
-                            Директни ползи
+                            Основни действия
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {DIRECT_BENEFITS.map((benefit, idx) => (
@@ -43,7 +43,7 @@ const Features: React.FC = () => {
                     <div className="bg-gutera-gold/5 rounded-3xl p-8 border border-gutera-gold/10 hover:shadow-lg transition-shadow duration-300 h-full">
                         <h3 className="text-2xl font-bold text-gutera-gold mb-6 flex items-center">
                             <span className="w-2 h-8 bg-gutera-gold mr-3 rounded-full"></span>
-                            Индиректни ползи
+                            Разширени ползи
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {INDIRECT_BENEFITS.map((benefit, idx) => (
@@ -66,7 +66,7 @@ const Features: React.FC = () => {
             <div className="bg-gutera-blue rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
                 <div className="relative z-10">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">За кого е подходящ Gutera?</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Gutera™ може да бъде подходящ избор при:</h2>
                     <div className="flex flex-wrap justify-center gap-4">
                         {TARGET_AUDIENCE.map((item, index) => (
                             <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center hover:bg-white/20 transition-all duration-300 cursor-default transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
@@ -77,7 +77,7 @@ const Features: React.FC = () => {
                     </div>
                     <div className="mt-10 text-center">
                         <p className="max-w-2xl mx-auto text-blue-100">
-                            Идеален за хора, желаещи естествена реколонизация на дебелочревния тракт без употребата на пробиотици.
+                            Подходящ при временни стомашно-чревни смущения, промени в моториката, чести пътувания или повишен прием на протеин.
                         </p>
                     </div>
                 </div>

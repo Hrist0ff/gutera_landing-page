@@ -21,12 +21,12 @@ const Hero: React.FC = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gutera-blue leading-tight">
-              Възстановете своя <br/>
-              <span className="text-gutera-green">Вътрешен Ритъм</span>
+              Gutera™ – иновативен <br/>
+              <span className="text-gutera-green">нутриент за вашия микробиом</span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg">
-              Gutera е специализирана формула за подкрепа на чревния баланс и функционален комфорт. Естествена реколонизация и детокс.
+              Подпомага естествения ритъм на храносмилателната система и балансира чревния микробиом без добавени пробиотични щамове. Намалява усещането за функционален дискомфорт и подкрепя бариерната функция.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pointer-events-auto">
@@ -37,15 +37,15 @@ const Hero: React.FC = () => {
                 <span>Поръчай Gutera</span>
                 <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
               </button>
-              <button className="flex items-center justify-center space-x-2 bg-white border-2 border-gutera-blue/10 text-gutera-blue px-8 py-4 rounded-full font-bold text-lg hover:bg-gutera-light hover:border-gutera-blue/30 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 active:scale-95">
+              <button className="flex items-center justify-center space-x-2 bg-white border-2 border-gutera-blue/10 text-gutera-blue px-8 py-4 rounded-full font-bold text-lg hover:bg-gutera-light hover:border-gutera-blue/30 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 active:scale-95" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}>
                 <span>Научи повече</span>
               </button>
             </div>
 
             <div className="pt-4 flex items-center space-x-6 text-sm text-gray-500 font-medium">
-              <div className="flex items-center"><CheckCircle size={16} className="text-gutera-gold mr-1"/> Без консерванти</div>
-              <div className="flex items-center"><CheckCircle size={16} className="text-gutera-gold mr-1"/> Без ГМО</div>
-              <div className="flex items-center"><CheckCircle size={16} className="text-gutera-gold mr-1"/> 10 Сашета</div>
+              <div className="flex items-center"><CheckCircle size={16} className="text-gutera-gold mr-1"/> Без пробиотици и инактивирани бактерии</div>
+              <div className="flex items-center"><CheckCircle size={16} className="text-gutera-gold mr-1"/> Без слабително действие и без газообразуване</div>
+              <div className="flex items-center"><CheckCircle size={16} className="text-gutera-gold mr-1"/> Дневен прием: 1 саше в чаша вода</div>
             </div>
           </div>
 

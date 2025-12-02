@@ -14,12 +14,11 @@ const CTA: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <RevealOnScroll>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Готови ли сте за усещане за <br/>
-              <span className="text-gutera-green">лекота и комфорт?</span>
+              Възстановете естествения <br/>
+              <span className="text-gutera-green">ритъм и комфорт</span>
             </h2>
             <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-              Възстановете естествения ритъм на тялото си с една стъпка. 
-              Поръчайте Gutera днес и усетете разликата.
+              Gutera™ поддържа микробиома без пробиотици, без слабително действие и без газообразуване. Продуктът е наличен без рецепта.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
